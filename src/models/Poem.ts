@@ -13,8 +13,8 @@ export function isPoemRecord(v: unknown): v is PoemRecord {
   return (
     obj.$type === "uk.ewancroft.anthology.poem" &&
     typeof obj.licence === "string" &&
-    typeof obj.poemText === "string" &&
-    typeof obj.poemTitle === "string" &&
+    typeof obj.text === "string" &&
+    typeof obj.title === "string" &&
     Array.isArray(obj.tags) &&
     typeof obj.createdAt === "string"
   );
