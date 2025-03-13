@@ -1,0 +1,21 @@
+{
+  "name": "poetry-lexicon",
+  "version": "1.0.0",
+  "description": "A project containing Lexicon schemas and generated models for poetry records.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "gen": "lex gen-server ./lexicons/* -o ./src/models",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@atproto/lexicon": "^0.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "license": "MIT"
+}
