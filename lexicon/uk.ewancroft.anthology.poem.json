@@ -1,0 +1,41 @@
+{
+  "lexicon": 1,
+  "id": "uk.ewancroft.anthology.poem",
+  "description": "A record representing a poem with licence, text, title, tags, and creation timestamp.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["licence", "text", "title", "tags", "createdAt"],
+        "properties": {
+          "licence": {
+            "type": "string",
+            "description": "The licence under which the poem is published."
+          },
+          "text": {
+            "type": "string",
+            "description": "The full text of the poem."
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the poem."
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "An array of tags associated with the poem."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "The timestamp when the poem was created."
+          }
+        }
+      }
+    }
+  }
+}
