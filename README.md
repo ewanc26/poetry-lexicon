@@ -7,14 +7,17 @@ This project contains [AT Protocol](https://atproto.com) Lexicon schemas for poe
 - **lexicons/**: Contains the Lexicon schema JSON files.
   - `uk.ewancroft.anthology.poem.json`
   - `uk.ewancroft.anthology.list.json`
+  - `uk.ewancroft.anthology.poet.json`
 - **src/**: Contains source code.
   - **models/**: Generated (or manually created) TypeScript models for the schemas.
     - `Poem.ts`
     - `PoemList.ts`
+    - `Poet.ts`
   - `index.ts`: Entry point of the application.
 - **tests/**: Contains test scripts.
   - `poem.test.ts`
   - `poemList.test.ts`
+  - `poet.test.ts`
 - **package.json**: Project configuration and scripts.
 - **tsconfig.json**: TypeScript configuration.
 - **README.md**: Project documentation.
