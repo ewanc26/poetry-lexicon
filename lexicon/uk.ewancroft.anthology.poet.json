@@ -1,0 +1,38 @@
+{
+  "lexicon": 1,
+  "id": "uk.ewancroft.anthology.poet",
+  "description": "A record representing a poet with their name, biography, and a list of their poems.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["name", "biography", "poems", "createdAt"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the poet."
+          },
+          "biography": {
+            "type": "string",
+            "description": "A short biography of the poet."
+          },
+          "poems": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "ref": "uk.ewancroft.anthology.poem"
+            },
+            "description": "An array of references to the poet's poems."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "The timestamp when the poet record was created."
+          }
+        }
+      }
+    }
+  }
+}
