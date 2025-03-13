@@ -7,8 +7,6 @@ export interface PoemGroup {
 
 export interface PoemListRecord {
   $type: string;
-  $rkey?: string;
-  $did?: string;
   listTitle: string;
   listDescription?: string;
   groups: PoemGroup[];

@@ -34,14 +34,6 @@
             "type": "string",
             "description": "The type of the record."
           },
-          "$rkey": {
-            "type": "string",
-            "description": "The record key."
-          },
-          "$did": {
-            "type": "string",
-            "description": "The DID key."
-          },
           "listTitle": {
             "type": "string",
             "description": "The title of the list."

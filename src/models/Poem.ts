@@ -1,7 +1,5 @@
 export interface PoemRecord {
   $type: string;
-  $rkey?: string;
-  $did?: string;
   licence: string;
   text: string;
   title: string;

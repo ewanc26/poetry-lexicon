@@ -5,8 +5,6 @@ describe("PoetRecord validation", () => {
   it("should validate a correct poet record", () => {
     const poem: PoemRecord = {
       $type: "uk.ewancroft.anthology.poem",
-      $rkey: "poem1",
-      $did: "did:example:123",
       licence: "CC BY-SA",
       text: "A simple poem text",
       title: "Simple Poem",
@@ -16,8 +14,6 @@ describe("PoetRecord validation", () => {
 
     const poet = {
       $type: "uk.ewancroft.anthology.poet",
-      $rkey: "poet1",
-      $did: "did:example:123",
       name: "John Doe",
       biography: "A short biography of John Doe.",
       poems: [poem],
@@ -29,8 +25,6 @@ describe("PoetRecord validation", () => {
   it("should invalidate an incorrect poet record", () => {
     const poet = {
       $type: "uk.ewancroft.anthology.poet",
-      $rkey: "poet1",
-      $did: "did:example:123",
       name: "John Doe",
       // Missing biography
       poems: [],

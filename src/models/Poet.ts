@@ -2,8 +2,6 @@ import { PoemRecord } from "./Poem";
 
 export interface PoetRecord {
   $type: string;
-  $rkey?: string;
-  $did?: string;
   name: string;
   biography: string;
   poems: PoemRecord[];
