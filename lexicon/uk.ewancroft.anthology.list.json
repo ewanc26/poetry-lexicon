@@ -1,8 +1,43 @@
 {
   "lexicon": 1,
   "id": "uk.ewancroft.anthology.list",
-  "description": "A record representing a list of poem groups, where each group contains poems sharing the same tag.",
+  "description": "Record representing a list of poems grouped by tags.",
   "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["listTitle", "groups", "createdAt"],
+        "properties": {
+          "listTitle": {
+            "type": "string",
+            "maxLength": 64,
+            "minLength": 1,
+            "description": "Display title for the list; cannot be empty."
+          },
+          "listDescription": {
+            "type": "string",
+            "maxGraphemes": 300,
+            "maxLength": 3000,
+            "description": "Optional description of the list."
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "ref",
+              "ref": "uk.ewancroft.anthology.list#group"
+            },
+            "description": "An array of groups, each containing a tag and an array of poem references."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "The timestamp when the list was created."
+          }
+        }
+      }
+    },
     "group": {
       "type": "object",
       "description": "A group of poems that share a common tag.",
@@ -19,42 +54,6 @@
             "ref": "uk.ewancroft.anthology.poem"
           },
           "description": "An array of references to poem records that have this tag."
-        }
-      }
-    },
-    "main": {
-      "type": "record",
-      "key": "tid",
-      "description": "A list record that groups poem records by their tags.",
-      "record": {
-        "type": "object",
-        "required": ["listTitle", "groups", "createdAt"],
-        "properties": {
-          "$type": {
-            "type": "string",
-            "description": "The type of the record."
-          },
-          "listTitle": {
-            "type": "string",
-            "description": "The title of the list."
-          },
-          "listDescription": {
-            "type": "string",
-            "description": "An optional description of the list."
-          },
-          "groups": {
-            "type": "array",
-            "items": {
-              "type": "ref",
-              "ref": "uk.ewancroft.anthology.list#group"
-            },
-            "description": "An array of groups, each containing a tag and an array of poem references."
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "datetime",
-            "description": "The timestamp when the list was created."
-          }
         }
       }
     }

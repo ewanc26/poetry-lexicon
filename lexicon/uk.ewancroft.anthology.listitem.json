@@ -1,0 +1,32 @@
+{
+  "lexicon": 1,
+  "id": "uk.ewancroft.anthology.listitem",
+  "description": "Record representing a poem's inclusion in a specific list. The AppView will ignore duplicate listitem records.",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["poem", "list", "createdAt"],
+        "properties": {
+          "poem": {
+            "type": "string",
+            "format": "at-uri",
+            "description": "Reference (AT-URI) to the poem record (uk.ewancroft.anthology.poem)."
+          },
+          "list": {
+            "type": "string",
+            "format": "at-uri",
+            "description": "Reference (AT-URI) to the list record (uk.ewancroft.anthology.list)."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "The timestamp when the poem was added to the list."
+          }
+        }
+      }
+    }
+  }
+}

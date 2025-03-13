@@ -7,17 +7,17 @@ This project contains [AT Protocol](https://atproto.com) Lexicon schemas for poe
 - **lexicons/**: Contains the Lexicon schema JSON files.
   - `uk.ewancroft.anthology.poem.json`
   - `uk.ewancroft.anthology.list.json`
-  - `uk.ewancroft.anthology.poet.json`
+  - `uk.ewancroft.anthology.listitem.json`
 - **src/**: Contains source code.
   - **models/**: Generated (or manually created) TypeScript models for the schemas.
     - `Poem.ts`
     - `PoemList.ts`
-    - `Poet.ts`
+    - `PoemListItem.ts`
   - `index.ts`: Entry point of the application.
 - **tests/**: Contains test scripts.
   - `poem.test.ts`
   - `poemList.test.ts`
-  - `poet.test.ts`
+  - `poemListItem.test.ts`
 - **package.json**: Project configuration and scripts.
 - **tsconfig.json**: TypeScript configuration.
 - **README.md**: Project documentation.
@@ -25,28 +25,28 @@ This project contains [AT Protocol](https://atproto.com) Lexicon schemas for poe
 ## Scripts
 
 - **Generate Models:**  
-  Run the following command to generate TypeScript models from your Lexicon schemas:  
-  
+  Run the following command to generate TypeScript models from your Lexicon schemas:
+
   ```bash
   npm run gen
   ```
 
 - **Build Project:**  
-  Compile the TypeScript code:  
+  Compile the TypeScript code:
 
   ```bash
   npm run build
   ```
 
 - **Run Application:**  
-  Start the application:  
+  Start the application:
 
   ```bash
   npm start
   ```
 
 - **Run Tests:**  
-  Execute tests using Jest:  
+  Execute tests using Jest:
 
   ```bash
   npm test
