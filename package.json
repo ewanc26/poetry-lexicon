@@ -17,5 +17,20 @@
     "jest": "^29.0.0",
     "@types/jest": "^29.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewanc26/poetry-lexicon.git"
+  },
+  "keywords": [
+    "atproto"
+  ],
+  "author": "Ewan Croft",
+  "bugs": {
+    "url": "https://github.com/ewanc26/poetry-lexicon/issues"
+  },
+  "homepage": "https://github.com/ewanc26/poetry-lexicon#readme"
 }
